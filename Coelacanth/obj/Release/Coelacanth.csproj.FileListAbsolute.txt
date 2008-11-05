@@ -1,0 +1,16 @@
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\bin\Release\Password Generator.exe
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\bin\Release\Password Generator.pdb
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\obj\Release\Password_Generator.Form1.resources
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\obj\Release\Password_Generator.Properties.Resources.resources
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\obj\Release\Coelacanth.csproj.GenerateResource.Cache
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\obj\Release\Password Generator.exe
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Password Generator\Password Generator\obj\Release\Password Generator.pdb
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.csproj.GenerateResource.Cache
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Release\Coelacanth.exe
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Release\Coelacanth.pdb
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.Properties.Resources.resources
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.exe
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.pdb
+C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.MainForm.resources
