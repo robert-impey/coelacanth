@@ -149,7 +149,7 @@
             0,
             0});
             this.lengthNmericUpDown.Name = "lengthNmericUpDown";
-            this.lengthNmericUpDown.Size = new System.Drawing.Size(35, 20);
+            this.lengthNmericUpDown.Size = new System.Drawing.Size(50, 20);
             this.lengthNmericUpDown.TabIndex = 14;
             this.lengthNmericUpDown.Value = new decimal(new int[] {
             8,

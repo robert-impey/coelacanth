@@ -14,3 +14,11 @@ C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelac
 C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.exe
 C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.pdb
 C:\Documents and Settings\Robert\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.MainForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Release\Coelacanth.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Release\Coelacanth.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.MainForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.csproj.GenerateResource.Cache
