@@ -22,3 +22,9 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.MainForm.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.Properties.Resources.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Release\Coelacanth.exe.manifest
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Release\Coelacanth.application
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.PasswordGenerationForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.exe.manifest
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.application
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.PasswordGenerationPanel.resources

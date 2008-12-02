@@ -9,19 +9,16 @@ using System.Windows.Forms;
 
 namespace Coelacanth
 {
-    public partial class MainForm : Form
+    public partial class PasswordGenerationForm : Form
     {
-        public MainForm()
+        public PasswordGenerationForm()
         {
             InitializeComponent();
         }
 
-        private void 
-            generateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            PasswordGenerationForm passwordGenerationForm = new PasswordGenerationForm();
 
-            passwordGenerationForm.Show();
         }
     }
 }
