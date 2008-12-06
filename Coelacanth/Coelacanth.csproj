@@ -14,7 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ManifestCertificateThumbprint>5EC6103515B1F41016474D5E51A67F3EA4F21EB1</ManifestCertificateThumbprint>
-    <ManifestKeyFile>Coelacanth_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>true</SignManifests>
     <PublishUrl>publish\</PublishUrl>
