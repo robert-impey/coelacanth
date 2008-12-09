@@ -28,3 +28,5 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.exe.manifest
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.application
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.PasswordGenerationPanel.resources
+C:\Users\Robert\Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.exe
+C:\Users\Robert\Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.pdb

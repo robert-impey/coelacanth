@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.passwordGenerationPanel = new PasswordGenerationPanel();
+            this.passwordGenerationPanel = new Coelacanth.PasswordGenerationPanel();
             this.lengthNmericUpDown = new System.Windows.Forms.NumericUpDown();
             this.lcCheckBox = new System.Windows.Forms.CheckBox();
             this.ucCheckBox = new System.Windows.Forms.CheckBox();
@@ -46,12 +46,14 @@
             // 
             this.passwordGenerationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passwordGenerationPanel.Location = new System.Drawing.Point(0, 0);
+            this.passwordGenerationPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.passwordGenerationPanel.Name = "passwordGenerationPanel";
-            this.passwordGenerationPanel.Size = new System.Drawing.Size(262, 166);
+            this.passwordGenerationPanel.Size = new System.Drawing.Size(349, 204);
             this.passwordGenerationPanel.TabIndex = 0;
+            this.passwordGenerationPanel.Load += new System.EventHandler(this.passwordGenerationPanel_Load);
             this.passwordGenerationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lengthNumericUpDown
+            // lengthNmericUpDown
             // 
             this.lengthNmericUpDown.Location = new System.Drawing.Point(133, 53);
             this.lengthNmericUpDown.Maximum = new decimal(new int[] {
@@ -64,8 +66,8 @@
             0,
             0,
             0});
-            this.lengthNmericUpDown.Name = "lengthNumericUpDown";
-            this.lengthNmericUpDown.Size = new System.Drawing.Size(50, 20);
+            this.lengthNmericUpDown.Name = "lengthNmericUpDown";
+            this.lengthNmericUpDown.Size = new System.Drawing.Size(50, 22);
             this.lengthNmericUpDown.TabIndex = 14;
             this.lengthNmericUpDown.Value = new decimal(new int[] {
             8,
@@ -102,7 +104,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(66, 108);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.ReadOnly = true;
-            this.passwordTextBox.Size = new System.Drawing.Size(163, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(163, 22);
             this.passwordTextBox.TabIndex = 13;
             // 
             // digitsCheckBox
@@ -167,10 +169,11 @@
             // 
             // PasswordGenerationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 166);
+            this.ClientSize = new System.Drawing.Size(349, 204);
             this.Controls.Add(this.passwordGenerationPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PasswordGenerationForm";
             this.Text = "PasswordGenerationForm";
             ((System.ComponentModel.ISupportInitialize)(this.lengthNmericUpDown)).EndInit();

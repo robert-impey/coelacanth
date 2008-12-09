@@ -20,3 +20,5 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\bin\Debug\Coelacanth.application
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Debug\Coelacanth.exe.manifest
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Debug\Coelacanth.application
+C:\Users\Robert\Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Debug\Coelacanth.exe
+C:\Users\Robert\Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Debug\Coelacanth.pdb

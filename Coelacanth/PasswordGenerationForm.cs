@@ -20,5 +20,10 @@ namespace Coelacanth
         {
 
         }
+
+        private void passwordGenerationPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
