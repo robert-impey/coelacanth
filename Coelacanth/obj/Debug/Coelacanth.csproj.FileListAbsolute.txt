@@ -31,8 +31,9 @@ C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Deb
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.PasswordGenerationForm.resources
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.PasswordGenerationPanel.resources
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.Properties.Resources.resources
-C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.csproj.GenerateResource.Cache
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.exe.manifest
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.application
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.exe
 C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\Coelacanth.pdb
+C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Robert\Documents\programming-projects\gui\coelacanth\Coelacanth\obj\Debug\GenerateResource.write.1.tlog
