@@ -22,3 +22,12 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.MainForm.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.Properties.Resources.resources
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Coelacanth\Coelacanth\obj\Release\Coelacanth.csproj.GenerateResource.Cache
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\Coelacanth.exe
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\Coelacanth.pdb
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\bin\Release\Coelacanth.exe
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\bin\Release\Coelacanth.pdb
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\Coelacanth.MainForm.resources
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\Coelacanth.Properties.Resources.resources
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\GenerateResource.read.1.tlog
+C:\Users\Robert\programming-projects\gui\coelacanth\Coelacanth\obj\Release\GenerateResource.write.1.tlog
