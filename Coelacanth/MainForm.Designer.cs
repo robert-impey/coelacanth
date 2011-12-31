@@ -46,7 +46,7 @@
             this.generateButton.Location = new System.Drawing.Point(11, 85);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(78, 23);
-            this.generateButton.TabIndex = 6;
+            this.generateButton.TabIndex = 1;
             this.generateButton.Text = "Generate";
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
@@ -56,7 +56,7 @@
             this.clearButton.Location = new System.Drawing.Point(95, 85);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(78, 23);
-            this.clearButton.TabIndex = 7;
+            this.clearButton.TabIndex = 2;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
@@ -114,7 +114,7 @@
             this.clipboardCheckBox.Location = new System.Drawing.Point(95, 12);
             this.clipboardCheckBox.Name = "clipboardCheckBox";
             this.clipboardCheckBox.Size = new System.Drawing.Size(70, 17);
-            this.clipboardCheckBox.TabIndex = 10;
+            this.clipboardCheckBox.TabIndex = 6;
             this.clipboardCheckBox.Text = "Clipboard";
             this.clipboardCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -150,7 +150,7 @@
             0});
             this.lengthNmericUpDown.Name = "lengthNmericUpDown";
             this.lengthNmericUpDown.Size = new System.Drawing.Size(50, 20);
-            this.lengthNmericUpDown.TabIndex = 14;
+            this.lengthNmericUpDown.TabIndex = 7;
             this.lengthNmericUpDown.Value = new decimal(new int[] {
             8,
             0,
