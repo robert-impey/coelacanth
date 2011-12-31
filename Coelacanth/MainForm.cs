@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.IO;
 
 namespace Coelacanth
 {
@@ -17,25 +16,60 @@ namespace Coelacanth
             InitializeComponent();
         }
 
-        private void 
-            generateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
-            PasswordGenerationForm passwordGenerationForm = new PasswordGenerationForm();
-
-            passwordGenerationForm.Show();
+            passwordTextBox.Text = "";
         }
 
-        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void generateButton_Click(object sender, EventArgs e)
         {
-            // Choose the file.
+            StringBuilder newPassword = new StringBuilder();
 
-            // Open the file
-            TextReader passwordFileTextReader = new StreamReader("date.txt");
+            //newPassword = "Generated Password";
 
-            // Read the contents of the file.
+            // Make the string of the available characters.
+            StringBuilder availableCharacters = new StringBuilder();
 
-            // Close the stream.
-            passwordFileTextReader.Close();
+            if (ucCheckBox.Checked) {
+                for (int i = 'A'; i <= 'Z'; i++) {
+                    availableCharacters.Append(Convert.ToChar(i));
+                }
+            }
+
+            if (lcCheckBox.Checked)
+            {
+                for (int i = 'a'; i <= 'z'; i++)
+                {
+                    availableCharacters.Append(Convert.ToChar(i));
+                }
+            }
+
+            if (digitsCheckBox.Checked)
+            {
+                for (int i = 0; i <= 9; i++)
+                {
+                    availableCharacters.Append(i);
+                }
+            }
+
+            // Make the password.
+
+            if (availableCharacters.Length > 0) {
+                Random random = new Random();
+
+                for (int i = 0; i < lengthNmericUpDown.Value; i++)
+                {
+                    int randomIndex = random.Next(0, availableCharacters.Length);
+                    newPassword.Append(Convert.ToChar(availableCharacters[randomIndex]));
+                }
+            }
+            // Show the password
+            passwordTextBox.Text = newPassword.ToString();
+
+            // Optionally copy the new password to the clipboard.
+            if (clipboardCheckBox.Checked) {
+                Clipboard.SetDataObject(newPassword.ToString(), true);
+            }
         }
     }
 }
