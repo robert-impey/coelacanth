@@ -18,27 +18,28 @@ namespace Coelacanth
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            passwordTextBox.Text = "";
+            Clipboard.Clear();
+            passwordTextBox.Text = string.Empty;
         }
 
         private void generateButton_Click(object sender, EventArgs e)
         {
-            StringBuilder newPassword = new StringBuilder();
-
-            //newPassword = "Generated Password";
+            var newPassword = new StringBuilder();
 
             // Make the string of the available characters.
-            StringBuilder availableCharacters = new StringBuilder();
+            var availableCharacters = new StringBuilder();
 
-            if (ucCheckBox.Checked) {
-                for (int i = 'A'; i <= 'Z'; i++) {
+            if (ucCheckBox.Checked)
+            {
+                for (var i = 'A'; i <= 'Z'; i++)
+                {
                     availableCharacters.Append(Convert.ToChar(i));
                 }
             }
 
             if (lcCheckBox.Checked)
             {
-                for (int i = 'a'; i <= 'z'; i++)
+                for (var i = 'a'; i <= 'z'; i++)
                 {
                     availableCharacters.Append(Convert.ToChar(i));
                 }
@@ -46,29 +47,30 @@ namespace Coelacanth
 
             if (digitsCheckBox.Checked)
             {
-                for (int i = 0; i <= 9; i++)
+                for (var i = 0; i <= 9; i++)
                 {
                     availableCharacters.Append(i);
                 }
             }
 
             // Make the password.
-
-            if (availableCharacters.Length > 0) {
-                Random random = new Random();
-
-                for (int i = 0; i < lengthNmericUpDown.Value; i++)
+            if (availableCharacters.Length > 0)
+            {
+                var random = new Random();
+                for (var i = 0; i < lengthNmericUpDown.Value; i++)
                 {
-                    int randomIndex = random.Next(0, availableCharacters.Length);
+                    var randomIndex = random.Next(0, availableCharacters.Length);
                     newPassword.Append(Convert.ToChar(availableCharacters[randomIndex]));
                 }
             }
+
             // Show the password
             passwordTextBox.Text = newPassword.ToString();
 
             // Optionally copy the new password to the clipboard.
-            if (clipboardCheckBox.Checked) {
-                Clipboard.SetDataObject(newPassword.ToString(), true);
+            if (clipboardCheckBox.Checked)
+            {
+                Clipboard.SetText(newPassword.ToString());
             }
         }
     }
