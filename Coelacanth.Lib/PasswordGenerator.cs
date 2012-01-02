@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Coelacanth.Lib
 {
     public class PasswordGenerator
     {
-        #region Properties
+        #region Public Properties
 
         public bool IncludeUppercase { get; set; }
         public bool IncludeLowercase { get; set; }
@@ -67,11 +66,13 @@ namespace Coelacanth.Lib
 
             if (availableCharacters.Length > 0)
             {
-                var random = new Random();
-                for (var i = 0; i < PasswordLength; i++)
+                var randomNumberGenerator = new RNGCryptoServiceProvider();
+                var randomNumbers = new byte[PasswordLength];
+                randomNumberGenerator.GetBytes(randomNumbers);
+
+                foreach (var randomNumber in randomNumbers)
                 {
-                    var randomIndex = random.Next(0, availableCharacters.Length);
-                    newPassword.Append(Convert.ToChar(availableCharacters[randomIndex]));
+                    newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
                 }
             }
 
