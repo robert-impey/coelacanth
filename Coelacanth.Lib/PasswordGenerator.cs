@@ -16,38 +16,52 @@ namespace Coelacanth.Lib
 
         #endregion
 
-        #region Methods
+        #region Private Properties
+
+        private string AvailableCharacters
+        {
+            get
+            {
+                var availableCharacters = new StringBuilder();
+
+                if (IncludeUppercase)
+                {
+                    for (var i = 'A'; i <= 'Z'; i++)
+                    {
+                        availableCharacters.Append(Convert.ToChar(i));
+                    }
+                }
+
+                if (IncludeLowercase)
+                {
+                    for (var i = 'a'; i <= 'z'; i++)
+                    {
+                        availableCharacters.Append(Convert.ToChar(i));
+                    }
+                }
+
+                if (IncludeDigits)
+                {
+                    for (var i = 0; i <= 9; i++)
+                    {
+                        availableCharacters.Append(i);
+                    }
+                }
+
+                return availableCharacters.ToString();
+            }
+        }
+
+        #endregion
+
+        #region Public Methods
 
         public string NewPassword()
         {
             var newPassword = new StringBuilder();
 
             // Make the string of the available characters.
-            var availableCharacters = new StringBuilder();
-
-            if (IncludeUppercase)
-            {
-                for (var i = 'A'; i <= 'Z'; i++)
-                {
-                    availableCharacters.Append(Convert.ToChar(i));
-                }
-            }
-
-            if (IncludeLowercase)
-            {
-                for (var i = 'a'; i <= 'z'; i++)
-                {
-                    availableCharacters.Append(Convert.ToChar(i));
-                }
-            }
-
-            if (IncludeDigits)
-            {
-                for (var i = 0; i <= 9; i++)
-                {
-                    availableCharacters.Append(i);
-                }
-            }
+            var availableCharacters = AvailableCharacters;
 
             // Make the password.
             if (availableCharacters.Length > 0)
