@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Coelacanth.Lib;
 
 namespace Coelacanth
 {
@@ -24,53 +25,23 @@ namespace Coelacanth
 
         private void generateButton_Click(object sender, EventArgs e)
         {
-            var newPassword = new StringBuilder();
+            var passwordGenerator = new PasswordGenerator();
 
-            // Make the string of the available characters.
-            var availableCharacters = new StringBuilder();
+            passwordGenerator.IncludeUppercase = ucCheckBox.Checked;
+            passwordGenerator.IncludeLowercase = lcCheckBox.Checked;
+            passwordGenerator.IncludeDigits = digitsCheckBox.Checked;
 
-            if (ucCheckBox.Checked)
-            {
-                for (var i = 'A'; i <= 'Z'; i++)
-                {
-                    availableCharacters.Append(Convert.ToChar(i));
-                }
-            }
+            passwordGenerator.PasswordLength = (int)lengthNmericUpDown.Value;
 
-            if (lcCheckBox.Checked)
-            {
-                for (var i = 'a'; i <= 'z'; i++)
-                {
-                    availableCharacters.Append(Convert.ToChar(i));
-                }
-            }
-
-            if (digitsCheckBox.Checked)
-            {
-                for (var i = 0; i <= 9; i++)
-                {
-                    availableCharacters.Append(i);
-                }
-            }
-
-            // Make the password.
-            if (availableCharacters.Length > 0)
-            {
-                var random = new Random();
-                for (var i = 0; i < lengthNmericUpDown.Value; i++)
-                {
-                    var randomIndex = random.Next(0, availableCharacters.Length);
-                    newPassword.Append(Convert.ToChar(availableCharacters[randomIndex]));
-                }
-            }
+            var newPassword = passwordGenerator.NewPassword();
 
             // Show the password
-            passwordTextBox.Text = newPassword.ToString();
+            passwordTextBox.Text = newPassword;
 
             // Optionally copy the new password to the clipboard.
             if (clipboardCheckBox.Checked)
             {
-                Clipboard.SetText(newPassword.ToString());
+                Clipboard.SetText(newPassword);
             }
         }
     }

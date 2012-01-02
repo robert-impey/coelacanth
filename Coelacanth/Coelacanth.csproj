@@ -144,6 +144,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coelacanth.Lib\Coelacanth.Lib.csproj">
+      <Project>{EBBAE941-3B22-4111-8F0A-AAC5228E6770}</Project>
+      <Name>Coelacanth.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
