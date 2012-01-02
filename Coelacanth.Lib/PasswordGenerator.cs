@@ -58,12 +58,13 @@ namespace Coelacanth.Lib
 
         public string NewPassword()
         {
+            return NewPassword(AvailableCharacters);
+        }
+
+        public string NewPassword(string availableCharacters)
+        {
             var newPassword = new StringBuilder();
 
-            // Make the string of the available characters.
-            var availableCharacters = AvailableCharacters;
-
-            // Make the password.
             if (availableCharacters.Length > 0)
             {
                 var random = new Random();

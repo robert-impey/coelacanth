@@ -58,6 +58,20 @@ namespace Coelacanth.Test
             Assert.IsFalse(Regex.IsMatch(password, "[0-9]+"));
         }
 
+        [Test]
+        public void PwGenGivenCharsDoesNotGeneratePwWithOtherChars()
+        {
+            var passwordGenerator = new PasswordGenerator();
+
+            passwordGenerator.PasswordLength = 1;
+
+            var givenCharacters = "ABCDE";
+
+            var password = passwordGenerator.NewPassword(givenCharacters);
+
+            Assert.IsTrue(Regex.IsMatch(password, "[A-E]"));
+        }
+
         #endregion
 
         #region Helpers
