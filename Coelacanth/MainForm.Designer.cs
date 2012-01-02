@@ -37,8 +37,8 @@
             this.clipboardCheckBox = new System.Windows.Forms.CheckBox();
             this.lengthLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.lengthNmericUpDown = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.lengthNmericUpDown)).BeginInit();
+            this.lengthNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.lengthNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // generateButton
@@ -135,23 +135,23 @@
             this.passwordTextBox.Size = new System.Drawing.Size(163, 20);
             this.passwordTextBox.TabIndex = 13;
             // 
-            // lengthNmericUpDown
+            // lengthNumericUpDown
             // 
-            this.lengthNmericUpDown.Location = new System.Drawing.Point(138, 59);
-            this.lengthNmericUpDown.Maximum = new decimal(new int[] {
+            this.lengthNumericUpDown.Location = new System.Drawing.Point(138, 59);
+            this.lengthNumericUpDown.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.lengthNmericUpDown.Minimum = new decimal(new int[] {
+            this.lengthNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.lengthNmericUpDown.Name = "lengthNmericUpDown";
-            this.lengthNmericUpDown.Size = new System.Drawing.Size(50, 20);
-            this.lengthNmericUpDown.TabIndex = 7;
-            this.lengthNmericUpDown.Value = new decimal(new int[] {
+            this.lengthNumericUpDown.Name = "lengthNumericUpDown";
+            this.lengthNumericUpDown.Size = new System.Drawing.Size(50, 20);
+            this.lengthNumericUpDown.TabIndex = 7;
+            this.lengthNumericUpDown.Value = new decimal(new int[] {
             8,
             0,
             0,
@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(246, 145);
-            this.Controls.Add(this.lengthNmericUpDown);
+            this.Controls.Add(this.lengthNumericUpDown);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.lengthLabel);
             this.Controls.Add(this.clipboardCheckBox);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.ucCheckBox);
             this.Name = "MainForm";
             this.Text = "Coelacanth";
-            ((System.ComponentModel.ISupportInitialize)(this.lengthNmericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lengthNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.CheckBox clipboardCheckBox;
         private System.Windows.Forms.Label lengthLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.NumericUpDown lengthNmericUpDown;
+        private System.Windows.Forms.NumericUpDown lengthNumericUpDown;
 
 
     }

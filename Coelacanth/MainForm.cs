@@ -31,7 +31,7 @@ namespace Coelacanth
             passwordGenerator.IncludeLowercase = lcCheckBox.Checked;
             passwordGenerator.IncludeDigits = digitsCheckBox.Checked;
 
-            passwordGenerator.PasswordLength = (int)lengthNmericUpDown.Value;
+            passwordGenerator.PasswordLength = (int)lengthNumericUpDown.Value;
 
             var newPassword = passwordGenerator.NewPassword();
 
