@@ -53,6 +53,7 @@
             // 
             // clearButton
             // 
+            this.clearButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.clearButton.Location = new System.Drawing.Point(95, 85);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(78, 23);
@@ -159,8 +160,10 @@
             // 
             // MainForm
             // 
+            this.AcceptButton = this.generateButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.clearButton;
             this.ClientSize = new System.Drawing.Size(246, 145);
             this.Controls.Add(this.lengthNumericUpDown);
             this.Controls.Add(this.passwordTextBox);
