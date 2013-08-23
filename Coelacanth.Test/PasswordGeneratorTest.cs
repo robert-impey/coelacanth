@@ -12,10 +12,8 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenGeneratesPwOfCorrectLength()
         {
-            var passwordGenerator = DefaultPasswordGenerator();
-
             var passwordLength = 20;
-            passwordGenerator.PasswordLength = passwordLength;
+            var passwordGenerator = new PasswordGenerator(true, true, true, passwordLength);
 
             var password = passwordGenerator.NewPassword();
 
@@ -25,9 +23,7 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenWoUcDoesNotGeneratePwWithUc()
         {
-            var passwordGenerator = DefaultPasswordGenerator();
-
-            passwordGenerator.IncludeUppercase = false;
+            var passwordGenerator = new PasswordGenerator(false, true, true, 20);
 
             var password = passwordGenerator.NewPassword();
 
@@ -37,9 +33,7 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenWoLcDoesNotGeneratePwWithLc()
         {
-            var passwordGenerator = DefaultPasswordGenerator();
-
-            passwordGenerator.IncludeLowercase = false;
+            var passwordGenerator = new PasswordGenerator(true, false, true, 20);
 
             var password = passwordGenerator.NewPassword();
 
@@ -49,9 +43,7 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenWoDigitsDoesNotGeneratePwWithDigits()
         {
-            var passwordGenerator = DefaultPasswordGenerator();
-
-            passwordGenerator.IncludeDigits = false;
+            var passwordGenerator = new PasswordGenerator(true, true, false, 20);
 
             var password = passwordGenerator.NewPassword();
 
@@ -61,9 +53,7 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenGivenCharsDoesNotGeneratePwWithOtherChars()
         {
-            var passwordGenerator = new PasswordGenerator();
-
-            passwordGenerator.PasswordLength = 1;
+            var passwordGenerator = new PasswordGenerator(false, false, false, 1);
 
             var givenCharacters = "ABCDE";
 
@@ -78,12 +68,7 @@ namespace Coelacanth.Test
 
         private static PasswordGenerator DefaultPasswordGenerator()
         {
-            var passwordGenerator = new PasswordGenerator();
-
-            passwordGenerator.IncludeUppercase = true;
-            passwordGenerator.IncludeLowercase = true;
-            passwordGenerator.IncludeDigits = true;
-            passwordGenerator.PasswordLength = 20;
+            var passwordGenerator = new PasswordGenerator(true, true, true, 20);
 
             return passwordGenerator;
         }

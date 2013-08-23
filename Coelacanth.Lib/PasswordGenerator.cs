@@ -6,14 +6,23 @@ namespace Coelacanth.Lib
 {
     public class PasswordGenerator
     {
-        #region Public Properties
+        #region private fields
 
-        public bool IncludeUppercase { get; set; }
-        public bool IncludeLowercase { get; set; }
-        public bool IncludeDigits { get; set; }
-        public int PasswordLength { get; set; }
+        readonly bool includeUppercase;
+        readonly bool includeLowercase;
+        readonly bool includeDigits;
+        readonly int passwordLength;
 
         #endregion
+
+        public PasswordGenerator(bool includeUppercase, bool includeLowercase, 
+            bool includeDigits, int passwordLength)
+        {
+            this.includeUppercase = includeUppercase;
+            this.includeLowercase = includeLowercase;
+            this.includeDigits = includeDigits;
+            this.passwordLength = passwordLength;
+        }
 
         #region Private Properties
 
@@ -23,7 +32,7 @@ namespace Coelacanth.Lib
             {
                 var availableCharacters = new StringBuilder();
 
-                if (IncludeUppercase)
+                if (includeUppercase)
                 {
                     for (var i = 'A'; i <= 'Z'; i++)
                     {
@@ -31,7 +40,7 @@ namespace Coelacanth.Lib
                     }
                 }
 
-                if (IncludeLowercase)
+                if (includeLowercase)
                 {
                     for (var i = 'a'; i <= 'z'; i++)
                     {
@@ -39,7 +48,7 @@ namespace Coelacanth.Lib
                     }
                 }
 
-                if (IncludeDigits)
+                if (includeDigits)
                 {
                     for (var i = 0; i <= 9; i++)
                     {
@@ -68,7 +77,7 @@ namespace Coelacanth.Lib
             {
                 using (var randomNumberGenerator = new RNGCryptoServiceProvider())
                 {
-                    var randomNumbers = new byte[PasswordLength];
+                    var randomNumbers = new byte[passwordLength];
                     randomNumberGenerator.GetBytes(randomNumbers);
 
                     foreach (var randomNumber in randomNumbers)
