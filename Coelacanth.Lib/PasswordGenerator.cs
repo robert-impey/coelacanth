@@ -66,13 +66,15 @@ namespace Coelacanth.Lib
 
             if (availableCharacters.Length > 0)
             {
-                var randomNumberGenerator = new RNGCryptoServiceProvider();
-                var randomNumbers = new byte[PasswordLength];
-                randomNumberGenerator.GetBytes(randomNumbers);
-
-                foreach (var randomNumber in randomNumbers)
+                using (var randomNumberGenerator = new RNGCryptoServiceProvider())
                 {
-                    newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
+                    var randomNumbers = new byte[PasswordLength];
+                    randomNumberGenerator.GetBytes(randomNumbers);
+
+                    foreach (var randomNumber in randomNumbers)
+                    {
+                        newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
+                    }
                 }
             }
 
