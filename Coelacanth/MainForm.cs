@@ -19,9 +19,15 @@ namespace Coelacanth
 
         private void generateButton_Click(object sender, EventArgs e)
         {
-            var passwordGenerator = new PasswordGenerator(
-                ucCheckBox.Checked, lcCheckBox.Checked, digitsCheckBox.Checked, 
-                (int)lengthNumericUpDown.Value);
+            var passwordGeneratorBuilder = new PasswordGeneratorBuilder
+            {
+                IncludeUppercase = ucCheckBox.Checked,
+                IncludeLowercase = lcCheckBox.Checked,
+                IncludeDigits = digitsCheckBox.Checked,
+                PasswordLength = (int)lengthNumericUpDown.Value
+            };
+
+            var passwordGenerator = passwordGeneratorBuilder.Build();
 
             var newPassword = passwordGenerator.NewPassword();
 

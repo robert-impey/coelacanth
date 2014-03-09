@@ -8,65 +8,26 @@ namespace Coelacanth.Lib
     {
         #region private fields
 
-        readonly bool includeUppercase;
-        readonly bool includeLowercase;
-        readonly bool includeDigits;
-        readonly int passwordLength;
+        private readonly string availableCharacters;
+        private readonly int passwordLength;
 
         #endregion
 
-        public PasswordGenerator(bool includeUppercase, bool includeLowercase, 
-            bool includeDigits, int passwordLength)
+        private PasswordGenerator()
         {
-            this.includeUppercase = includeUppercase;
-            this.includeLowercase = includeLowercase;
-            this.includeDigits = includeDigits;
+        }
+
+        internal PasswordGenerator(string availableCharacters, int passwordLength)
+        {
+            this.availableCharacters = availableCharacters; 
             this.passwordLength = passwordLength;
         }
-
-        #region Private Properties
-
-        private string AvailableCharacters
-        {
-            get
-            {
-                var availableCharacters = new StringBuilder();
-
-                if (includeUppercase)
-                {
-                    for (var i = 'A'; i <= 'Z'; i++)
-                    {
-                        availableCharacters.Append(Convert.ToChar(i));
-                    }
-                }
-
-                if (includeLowercase)
-                {
-                    for (var i = 'a'; i <= 'z'; i++)
-                    {
-                        availableCharacters.Append(Convert.ToChar(i));
-                    }
-                }
-
-                if (includeDigits)
-                {
-                    for (var i = 0; i <= 9; i++)
-                    {
-                        availableCharacters.Append(i);
-                    }
-                }
-
-                return availableCharacters.ToString();
-            }
-        }
-
-        #endregion
-
+        
         #region Public Methods
 
         public string NewPassword()
         {
-            return NewPassword(AvailableCharacters);
+            return NewPassword(availableCharacters);
         }
 
         public string NewPassword(string availableCharacters)

@@ -13,7 +13,15 @@ namespace Coelacanth.Test
         public void PwGenGeneratesPwOfCorrectLength()
         {
             var passwordLength = 20;
-            var passwordGenerator = new PasswordGenerator(true, true, true, passwordLength);
+            var passwordGeneratorBuilder = new PasswordGeneratorBuilder
+                {
+                    IncludeUppercase = true,
+                    IncludeLowercase = true,
+                    IncludeDigits = true,
+                    PasswordLength = passwordLength
+                };
+
+            var passwordGenerator = passwordGeneratorBuilder.Build();
 
             var password = passwordGenerator.NewPassword();
 
@@ -23,7 +31,15 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenWoUcDoesNotGeneratePwWithUc()
         {
-            var passwordGenerator = new PasswordGenerator(false, true, true, 20);
+            var passwordGeneratorBuilder = new PasswordGeneratorBuilder
+            {
+                IncludeUppercase = false,
+                IncludeLowercase = true,
+                IncludeDigits = true,
+                PasswordLength = 20
+            };
+
+            var passwordGenerator = passwordGeneratorBuilder.Build();
 
             var password = passwordGenerator.NewPassword();
 
@@ -33,7 +49,15 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenWoLcDoesNotGeneratePwWithLc()
         {
-            var passwordGenerator = new PasswordGenerator(true, false, true, 20);
+            var passwordGeneratorBuilder = new PasswordGeneratorBuilder
+            {
+                IncludeUppercase = true,
+                IncludeLowercase = false,
+                IncludeDigits = true,
+                PasswordLength = 20
+            };
+
+            var passwordGenerator = passwordGeneratorBuilder.Build();
 
             var password = passwordGenerator.NewPassword();
 
@@ -43,34 +67,19 @@ namespace Coelacanth.Test
         [Test]
         public void PwGenWoDigitsDoesNotGeneratePwWithDigits()
         {
-            var passwordGenerator = new PasswordGenerator(true, true, false, 20);
+            var passwordGeneratorBuilder = new PasswordGeneratorBuilder
+            {
+                IncludeUppercase = true,
+                IncludeLowercase = true,
+                IncludeDigits = false,
+                PasswordLength = 20
+            };
+
+            var passwordGenerator = passwordGeneratorBuilder.Build();
 
             var password = passwordGenerator.NewPassword();
 
             Assert.IsFalse(Regex.IsMatch(password, "[0-9]+"));
-        }
-
-        [Test]
-        public void PwGenGivenCharsDoesNotGeneratePwWithOtherChars()
-        {
-            var passwordGenerator = new PasswordGenerator(false, false, false, 1);
-
-            var givenCharacters = "ABCDE";
-
-            var password = passwordGenerator.NewPassword(givenCharacters);
-
-            Assert.IsTrue(Regex.IsMatch(password, "[A-E]"));
-        }
-
-        #endregion
-
-        #region Helpers
-
-        private static PasswordGenerator DefaultPasswordGenerator()
-        {
-            var passwordGenerator = new PasswordGenerator(true, true, true, 20);
-
-            return passwordGenerator;
         }
 
         #endregion
