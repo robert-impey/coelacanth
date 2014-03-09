@@ -27,11 +27,6 @@ namespace Coelacanth.Lib
 
         public string NewPassword()
         {
-            return NewPassword(availableCharacters);
-        }
-
-        public string NewPassword(string availableCharacters)
-        {
             var newPassword = new StringBuilder();
 
             if (availableCharacters.Length > 0)

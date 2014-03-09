@@ -54,18 +54,17 @@ namespace Coelacanth.Lib
 
             if (IncludeUppercase)
             {
-                
-                    availableCharacters.Append(GetUppercase());
+                availableCharacters.Append(GetUppercase());
             }
 
             if (IncludeLowercase)
             {
-                availableCharacters.Append(GetUppercase());
+                availableCharacters.Append(GetLowercase());
             }
 
             if (IncludeDigits)
             {
-                availableCharacters.Append(GetUppercase());
+                availableCharacters.Append(GetDigits());
             }
 
             return new PasswordGenerator(availableCharacters.ToString(), PasswordLength);
