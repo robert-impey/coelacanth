@@ -19,10 +19,10 @@ namespace Coelacanth.Lib
 
         internal PasswordGenerator(string availableCharacters, int passwordLength)
         {
-            this.availableCharacters = availableCharacters; 
+            this.availableCharacters = availableCharacters;
             this.passwordLength = passwordLength;
         }
-        
+
         #region Public Methods
 
         public string NewPassword()
