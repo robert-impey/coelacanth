@@ -7,25 +7,26 @@ namespace Coelacanth.Test
     [TestFixture]
     public class PasswordGeneratorTest
     {
+        private const int PasswordLength = 20;
+
         #region Tests
 
         [Test]
         public void PwGenGeneratesPwOfCorrectLength()
         {
-            var passwordLength = 20;
             var passwordGeneratorBuilder = new PasswordGeneratorBuilder
                 {
                     IncludeUppercase = true,
                     IncludeLowercase = true,
                     IncludeDigits = true,
-                    PasswordLength = passwordLength
+                    PasswordLength = PasswordLength
                 };
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
 
             var password = passwordGenerator.NewPassword();
 
-            Assert.AreEqual(passwordLength, password.Length);
+            Assert.AreEqual(PasswordLength, password.Length);
         }
 
         [Test]
@@ -36,7 +37,7 @@ namespace Coelacanth.Test
                 IncludeUppercase = false,
                 IncludeLowercase = true,
                 IncludeDigits = true,
-                PasswordLength = 20
+                PasswordLength = PasswordLength
             };
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
@@ -54,7 +55,7 @@ namespace Coelacanth.Test
                 IncludeUppercase = true,
                 IncludeLowercase = false,
                 IncludeDigits = true,
-                PasswordLength = 20
+                PasswordLength = PasswordLength
             };
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
@@ -72,7 +73,7 @@ namespace Coelacanth.Test
                 IncludeUppercase = true,
                 IncludeLowercase = true,
                 IncludeDigits = false,
-                PasswordLength = 20
+                PasswordLength = PasswordLength
             };
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
