@@ -1,14 +1,16 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Coelacanth.Lib
 {
-    public class PasswordGenerator
+    public class PasswordGenerator : IDisposable
     {
         #region private fields
 
         private readonly string availableCharacters;
         private readonly int passwordLength;
+        private RNGCryptoServiceProvider randomNumberGenerator;
 
         #endregion
 
@@ -20,6 +22,7 @@ namespace Coelacanth.Lib
         {
             this.availableCharacters = availableCharacters;
             this.passwordLength = passwordLength;
+            this.randomNumberGenerator = new RNGCryptoServiceProvider();
         }
 
         #region Public Methods
@@ -30,15 +33,12 @@ namespace Coelacanth.Lib
 
             if (availableCharacters.Length > 0)
             {
-                using (var randomNumberGenerator = new RNGCryptoServiceProvider())
-                {
-                    var randomNumbers = new byte[passwordLength];
-                    randomNumberGenerator.GetBytes(randomNumbers);
+                var randomNumbers = new byte[passwordLength];
+                randomNumberGenerator.GetBytes(randomNumbers);
 
-                    foreach (var randomNumber in randomNumbers)
-                    {
-                        newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
-                    }
+                foreach (var randomNumber in randomNumbers)
+                {
+                    newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
                 }
             }
 
@@ -46,5 +46,10 @@ namespace Coelacanth.Lib
         }
 
         #endregion
+
+        public void Dispose()
+        {
+            this.randomNumberGenerator.Dispose();
+        }
     }
 }

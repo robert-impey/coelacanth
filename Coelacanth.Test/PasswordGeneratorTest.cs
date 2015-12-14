@@ -22,11 +22,12 @@ namespace Coelacanth.Test
                     PasswordLength = PasswordLength
                 };
 
-            var passwordGenerator = passwordGeneratorBuilder.Build();
+            using (var passwordGenerator = passwordGeneratorBuilder.Build())
+            {
+                var password = passwordGenerator.NewPassword();
 
-            var password = passwordGenerator.NewPassword();
-
-            Assert.AreEqual(PasswordLength, password.Length);
+                Assert.AreEqual(PasswordLength, password.Length);
+            }
         }
 
         [Test]
@@ -40,11 +41,12 @@ namespace Coelacanth.Test
                 PasswordLength = PasswordLength
             };
 
-            var passwordGenerator = passwordGeneratorBuilder.Build();
+            using (var passwordGenerator = passwordGeneratorBuilder.Build())
+            {
+                var password = passwordGenerator.NewPassword();
 
-            var password = passwordGenerator.NewPassword();
-
-            Assert.IsFalse(Regex.IsMatch(password, "[A-Z]+"));
+                Assert.IsFalse(Regex.IsMatch(password, "[A-Z]+"));
+            }
         }
 
         [Test]
@@ -58,11 +60,12 @@ namespace Coelacanth.Test
                 PasswordLength = PasswordLength
             };
 
-            var passwordGenerator = passwordGeneratorBuilder.Build();
+            using (var passwordGenerator = passwordGeneratorBuilder.Build())
+            {
+                var password = passwordGenerator.NewPassword();
 
-            var password = passwordGenerator.NewPassword();
-
-            Assert.IsFalse(Regex.IsMatch(password, "[a-z]+"));
+                Assert.IsFalse(Regex.IsMatch(password, "[a-z]+"));
+            }
         }
 
         [Test]
@@ -76,11 +79,12 @@ namespace Coelacanth.Test
                 PasswordLength = PasswordLength
             };
 
-            var passwordGenerator = passwordGeneratorBuilder.Build();
+            using (var passwordGenerator = passwordGeneratorBuilder.Build())
+            {
+                var password = passwordGenerator.NewPassword();
 
-            var password = passwordGenerator.NewPassword();
-
-            Assert.IsFalse(Regex.IsMatch(password, "[0-9]+"));
+                Assert.IsFalse(Regex.IsMatch(password, "[0-9]+"));
+            }
         }
 
         #endregion

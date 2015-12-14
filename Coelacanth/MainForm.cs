@@ -27,17 +27,18 @@ namespace Coelacanth
                 PasswordLength = (int)lengthNumericUpDown.Value
             };
 
-            var passwordGenerator = passwordGeneratorBuilder.Build();
-
-            var newPassword = passwordGenerator.NewPassword();
-
-            // Show the password
-            passwordTextBox.Text = newPassword;
-
-            // Optionally copy the new password to the clipboard.
-            if (clipboardCheckBox.Checked)
+            using (var passwordGenerator = passwordGeneratorBuilder.Build())
             {
-                Clipboard.SetText(newPassword);
+                var newPassword = passwordGenerator.NewPassword();
+
+                // Show the password
+                passwordTextBox.Text = newPassword;
+
+                // Optionally copy the new password to the clipboard.
+                if (clipboardCheckBox.Checked)
+                {
+                    Clipboard.SetText(newPassword);
+                }
             }
         }
     }
