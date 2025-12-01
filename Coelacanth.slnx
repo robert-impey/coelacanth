@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Docs/">
+    <File Path="Coelacanth/ReadMe.md" />
+    <File Path="License.txt" />
+  </Folder>
   <Project Path="Coelacanth.Lib/Coelacanth.Lib.csproj" />
   <Project Path="Coelacanth.Test/Coelacanth.Test.csproj" />
   <Project Path="Coelacanth/Coelacanth.csproj" />
