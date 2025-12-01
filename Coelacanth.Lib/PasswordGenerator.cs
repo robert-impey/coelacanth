@@ -5,16 +5,8 @@ namespace Coelacanth.Lib
 {
     public class PasswordGenerator
     {
-        #region private fields
-
         private readonly string availableCharacters;
         private readonly int passwordLength;
-
-        #endregion
-
-        private PasswordGenerator()
-        {
-        }
 
         internal PasswordGenerator(string availableCharacters, int passwordLength)
         {
@@ -22,29 +14,22 @@ namespace Coelacanth.Lib
             this.passwordLength = passwordLength;
         }
 
-        #region Public Methods
-
         public string NewPassword()
         {
             var newPassword = new StringBuilder();
 
             if (availableCharacters.Length > 0)
             {
-                using (var randomNumberGenerator = new RNGCryptoServiceProvider())
-                {
-                    var randomNumbers = new byte[passwordLength];
-                    randomNumberGenerator.GetBytes(randomNumbers);
+                var randomNumbers = new byte[passwordLength];
+                RandomNumberGenerator.Fill(randomNumbers);
 
-                    foreach (var randomNumber in randomNumbers)
-                    {
-                        newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
-                    }
+                foreach (var randomNumber in randomNumbers)
+                {
+                    newPassword.Append(availableCharacters[randomNumber % availableCharacters.Length]);
                 }
             }
 
             return newPassword.ToString();
         }
-
-        #endregion
     }
 }
