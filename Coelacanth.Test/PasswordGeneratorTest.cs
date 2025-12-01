@@ -1,37 +1,39 @@
 ﻿using Coelacanth.Lib;
-using NUnit.Framework;
+using Xunit;
+using Shouldly;
 using System.Text.RegularExpressions;
 
 namespace Coelacanth.Test
 {
-    [TestFixture]
     public class PasswordGeneratorTest
     {
         private const int PasswordLength = 20;
 
-        #region Tests
-
-        [Test]
+        [Fact]
         public void PwGenGeneratesPwOfCorrectLength()
         {
+            // Arrange
             var passwordGeneratorBuilder = new PasswordGeneratorBuilder
-                {
-                    IncludeUppercase = true,
-                    IncludeLowercase = true,
-                    IncludeDigits = true,
-                    PasswordLength = PasswordLength
-                };
+            {
+                IncludeUppercase = true,
+                IncludeLowercase = true,
+                IncludeDigits = true,
+                PasswordLength = PasswordLength
+            };
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
 
+            // Act
             var password = passwordGenerator.NewPassword();
 
-            Assert.AreEqual(PasswordLength, password.Length);
+            // Assert: Assert.AreEqual(expected, actual) becomes actual.ShouldBe(expected)
+            password.Length.ShouldBe(PasswordLength);
         }
 
-        [Test]
+        [Fact]
         public void PwGenWoUcDoesNotGeneratePwWithUc()
         {
+            // Arrange
             var passwordGeneratorBuilder = new PasswordGeneratorBuilder
             {
                 IncludeUppercase = false,
@@ -42,14 +44,16 @@ namespace Coelacanth.Test
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
 
+            // Act
             var password = passwordGenerator.NewPassword();
 
-            Assert.IsFalse(Regex.IsMatch(password, "[A-Z]+"));
+            Regex.IsMatch(password, "[A-Z]+").ShouldBeFalse();
         }
 
-        [Test]
+        [Fact]
         public void PwGenWoLcDoesNotGeneratePwWithLc()
         {
+            // Arrange
             var passwordGeneratorBuilder = new PasswordGeneratorBuilder
             {
                 IncludeUppercase = true,
@@ -60,14 +64,17 @@ namespace Coelacanth.Test
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
 
+            // Act
             var password = passwordGenerator.NewPassword();
 
-            Assert.IsFalse(Regex.IsMatch(password, "[a-z]+"));
+            // Assert: Assert.IsFalse(condition) becomes condition.ShouldBeFalse()
+            Regex.IsMatch(password, "[a-z]+").ShouldBeFalse();
         }
 
-        [Test]
+        [Fact]
         public void PwGenWoDigitsDoesNotGeneratePwWithDigits()
         {
+            // Arrange
             var passwordGeneratorBuilder = new PasswordGeneratorBuilder
             {
                 IncludeUppercase = true,
@@ -78,11 +85,11 @@ namespace Coelacanth.Test
 
             var passwordGenerator = passwordGeneratorBuilder.Build();
 
+            // Act
             var password = passwordGenerator.NewPassword();
 
-            Assert.IsFalse(Regex.IsMatch(password, "[0-9]+"));
+            // Assert: Assert.IsFalse(condition) becomes condition.ShouldBeFalse()
+            Regex.IsMatch(password, "[0-9]+").ShouldBeFalse();
         }
-
-        #endregion
     }
 }
